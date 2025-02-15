@@ -17,6 +17,7 @@ body {
     position: relative;
     height: 644px;
     border-bottom: 3px solid red;
+    overflow: hidden;
 }
 
 .main::before {
