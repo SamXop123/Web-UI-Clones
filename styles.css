@@ -142,6 +142,10 @@ nav button {
     position: relative;
     top:2px;
 }
+
+.form button:hover {
+    cursor: pointer;
+}
  
 
 .next-main {
@@ -167,7 +171,7 @@ nav button {
 }
 
 .card {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     border-radius: 10%;
     width: 160px;
     height: 230px;
@@ -181,3 +185,4 @@ nav button {
     height: 100%;
     border-radius: 10%;
 }
+
