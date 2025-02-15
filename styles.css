@@ -175,6 +175,7 @@ nav button {
     border-radius: 10%;
     width: 160px;
     height: 230px;
+    transition: 0.3s ease;
 }
 
 .trending-img {
@@ -186,3 +187,8 @@ nav button {
     border-radius: 10%;
 }
 
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
