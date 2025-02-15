@@ -148,15 +148,15 @@ nav button {
 }
  
 
-.next-main {
+.second-main {
     width: 100%;
     color: white;
 }
 
 .trend {
     margin: 80px 130px;
-    font-size: 25px;
-    font-weight: 550;
+    font-size: 23px;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -191,4 +191,44 @@ nav button {
     transform: scale(1.1);
     cursor: pointer;
     transition: 0.3s ease;
+}
+
+
+.third-main {
+    width: 100%;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.container-2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.squares {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10%;
+    padding: 20px 25px;
+    width: 17vw;
+    background: linear-gradient(rgb(23, 11, 54), rgb(71, 37, 37));
+}
+
+.square-head {
+    font-size: 22px;
+}
+
+.square-desc {
+    font-size: 13px;
+    color: rgb(167, 167, 167);
+    margin-bottom: 20px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items:last baseline
 }
