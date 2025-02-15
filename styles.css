@@ -123,6 +123,13 @@ nav button {
 .form input {
     padding: 15px;
     width: 20vw;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.form input::placeholder {
+    color:white;
+    font-size: 15px;
 }
 
 .form button {
@@ -132,5 +139,7 @@ nav button {
     background-color: red;
     color: white;
     font-weight: 600;
+    position: relative;
+    top:2px;
 }
 
