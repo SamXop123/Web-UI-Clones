@@ -1,9 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
-
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    position: relative;
+    height: 644px;
+    border-bottom: 3px solid red;
+}
+
+.main::before {
+    content: "";
+    background-image: url("assets/bg.jpg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8; 
+    z-index: -1;
+}
+
+nav {
+    max-width: 60vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+nav img {
+    color: red;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
 }
