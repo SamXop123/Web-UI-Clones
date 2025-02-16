@@ -285,7 +285,6 @@ nav button {
     border-radius: 7px;
 }
 
-
 .form-override button {
     border-radius: 6px;
     font-weight: 510;
@@ -298,14 +297,12 @@ nav button {
     width: 80vw;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 .call {
     font-size: small;
     margin-bottom: 30px;
-    margin-left: 120px;
+    margin-left: 135px;
 }
 
 .links-container {
@@ -324,5 +321,25 @@ nav button {
     text-decoration: underline;
 }
 
+.btn-bottom {
+    margin-top: 50px;
+    margin-left: 135px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.btn-bottom svg {
+    color: white;
+    width: 23px;
+}
+
+.bottom-most {
+    margin-top: 30px;
+    margin-left: 135px;
+    margin-bottom: 100px;
+    font-size: 14px;
+}
 
