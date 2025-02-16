@@ -237,3 +237,66 @@ nav button {
     justify-content: flex-end;
     align-items: flex-end;
 }
+
+.fourth-main {
+    color: white;
+
+}
+
+.query-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+.query-card {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    background-color: #302c2c;
+    padding: 19px 17px;
+    
+    transition: 1s ease;
+}
+
+.query-card:hover {
+    background-color: #4b4747;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.question {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.rd-t-wtch {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 10px;
+}
+
+.form-override input {
+    width: 30vw;
+    border-radius: 7px;
+}
+
+
+.form-override button {
+    border-radius: 6px;
+    font-weight: 510;
+}
+
+
+.footer {
+    color: rgb(137, 137, 137);
+
+}
+
+.call {
+    font-size: small;
+}
