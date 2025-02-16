@@ -146,7 +146,6 @@ nav button {
 .form button:hover {
     cursor: pointer;
 }
- 
 
 .second-main {
     width: 100%;
@@ -171,7 +170,6 @@ nav button {
 }
 
 .card {
-    /* border: 3px solid red; */
     border-radius: 10%;
     width: 160px;
     height: 230px;
@@ -193,7 +191,6 @@ nav button {
     transition: 0.3s ease;
 }
 
-
 .third-main {
     width: 100%;
     color: white;
@@ -207,7 +204,6 @@ nav button {
 }
 
 .squares {
-    /* border: 3px solid red; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -226,7 +222,6 @@ nav button {
 .square-desc {
     font-size: 13px;
     color: rgb(167, 167, 167);
-    /* margin-bottom: 20px; */
 }
 
 .img-container {
