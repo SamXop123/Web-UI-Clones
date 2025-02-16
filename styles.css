@@ -121,6 +121,7 @@ nav button {
 }
 
 .form input {
+    color: white;
     padding: 15px;
     width: 20vw;
     background-color: black;
@@ -276,6 +277,7 @@ nav button {
 }
 
 .form-override input {
+    color: white;
     width: 30vw;
     border-radius: 7px;
     background-color: #1e1d1d;
@@ -340,7 +342,18 @@ nav button {
     font-size: 14px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
+    .card-container {
+        flex-wrap: wrap;
+    }
+
+    .container-2 {
+        flex-wrap: wrap;
+    }
+
+    .sqaures {
+        width: 20vw;
+    }
 }
 
