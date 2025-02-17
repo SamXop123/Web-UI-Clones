@@ -344,6 +344,48 @@ nav button {
 
 @media (max-width: 1000px) {
 
+
+    nav {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    nav span {
+        margin-top: 25px;
+    }
+
+    .nav-div {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .btn-red-sm {
+        width: 80px;
+    }
+
+    .heading {
+        font-size: 38px;
+    }
+
+    .bottom-subhead {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .form input {
+        width: 40vw;
+    }
+
+    .form button {
+        position: relative;
+        top: 0px;
+        padding: 5px;
+        font-size: 10px;
+        width: 20vw;
+        height: 52px;
+    }
+
     .card-container {
         flex-wrap: wrap;
     }
@@ -355,5 +397,7 @@ nav button {
     .sqaures {
         width: 20vw;
     }
+
+    .
 }
 
