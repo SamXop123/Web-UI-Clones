@@ -253,7 +253,6 @@ nav button {
     width: 80vw;
     background-color: #302c2c;
     padding: 19px 17px;
-    
     transition: 1s ease;
 }
 
@@ -386,18 +385,66 @@ nav button {
         height: 52px;
     }
 
+    .section-head {
+        margin: 60px 0px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
     .card-container {
         flex-wrap: wrap;
     }
 
     .container-2 {
         flex-wrap: wrap;
+        gap: 10px;
     }
 
-    .sqaures {
-        width: 20vw;
+    .squares {
+        width: 30vw;
     }
 
-    .
+    .square-head {
+        font-size: 17px;
+    }
+
+    .square-desc {
+        font-size: 9px;
+    }
+
+    .img-container svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .query-card {
+        padding: 13px 16px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+    .call {
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .footer {
+        margin-left: 50px;
+    }
+
+    .link-section {
+        font-size: 10px;
+    }
+
+    .btn-bottom {
+        margin-left: 15px;
+        width: 110px;
+    }
+
+    .bottom-most {
+        margin-left: 15px;
+    }
+
 }
-
