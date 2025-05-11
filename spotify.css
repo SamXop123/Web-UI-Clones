@@ -114,3 +114,44 @@ body {
     transition: 0.2s ease-in;
 }
 
+.nav-p-2-links-b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.install-btn {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in;
+}
+.install-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.install-icon {
+    margin-right: 3px;
+    margin-left: 15px;
+} 
+.install {
+    margin-right: 15px;
+    color: #a7a7a7;
+    font-family: "Spotify Mix", "Cambria";
+    text-decoration: none;
+    font-weight: 600;
+}
+.install-btn:hover .install-icon,
+.install-btn:hover .install {
+    color: white;
+    stroke: white; 
+}
+
+
+.login {
+    background-color: white;
+    padding: 10px 25px;
+    color: black;
+    border-radius: 20px;
+}
+
