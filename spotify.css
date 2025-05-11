@@ -36,7 +36,7 @@ body {
 .search-box {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
     width: 400px;
     height: 45px;
     padding: 0 10px;
@@ -44,9 +44,26 @@ body {
     border-radius: 20px;
 }
 
-.search-placeholder {
+.s-p-1, .s-p-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.e-9890-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
     color: #a7a7a7;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 14px;
+    width: 200px; /* adjust based on your layout */
     letter-spacing: 0.5px;
 }
