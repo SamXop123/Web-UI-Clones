@@ -13,6 +13,16 @@ body {
     height: 70px;
     display: flex;
     margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-p-1 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    margin-top: 10px;
     align-items: center;
     gap: 10px;
 }
@@ -73,3 +83,34 @@ body {
     width: 300px; 
     letter-spacing: 0.5px;
 }
+
+
+.nav-p-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-p-2-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.n-p-2-a {
+    color: #a7a7a7;
+    font-family: "Spotify Mix", "Cambria";
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.n-p-2-a:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
