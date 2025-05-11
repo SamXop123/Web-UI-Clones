@@ -30,7 +30,8 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    color: #d3d3d3
+    color: #d3d3d3;
+    margin-left: 25px;
 }
 
 .search-box {
@@ -42,6 +43,11 @@ body {
     padding: 0 10px;
     background-color: #1F1F1F;
     border-radius: 20px;
+}
+
+.search-box:focus-within {
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .s-p-1, .s-p-2 {
@@ -62,8 +68,8 @@ body {
     border: none;
     outline: none;
     color: #a7a7a7;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Spotify Mix", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 14px;
-    width: 200px; /* adjust based on your layout */
+    width: 300px; 
     letter-spacing: 0.5px;
 }
