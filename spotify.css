@@ -154,4 +154,32 @@ body {
     color: black;
     border-radius: 20px;
 }
+.login:hover {
+    color: black;
+}
 
+
+
+/*? MAIN PART */
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 5px;
+}
+
+.sidebar {
+    width: 30vw;
+    height: 85vh;
+    background-color: #1F1F1F;
+    border-radius: 15px;
+}
+
+.content {
+    width: 75vw;
+    height: 85vh;
+    background-color: #1F1F1F;
+    border-radius: 15px;
+}
