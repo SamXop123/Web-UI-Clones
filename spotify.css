@@ -174,11 +174,29 @@ body {
     height: 85vh;
     background-color: #1F1F1F;
     border-radius: 15px;
+    padding: 5px;
 }
 
 .content {
     width: 75vw;
     height: 85vh;
     background-color: #1F1F1F;
+    padding: 5px;
     border-radius: 15px;
 }
+
+.span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 20px;
+}
+
+#text {
+    color: white;
+    font-size: 18px;
+    font-family: "Spotify Mix", "Cambria";
+    font-weight: 600;
+}
+
