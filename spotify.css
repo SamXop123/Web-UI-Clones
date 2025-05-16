@@ -214,3 +214,22 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-btns {
+  background: none;      
+  border: none;          
+  outline: none;         
+  cursor: pointer;       
+  padding: 0;            
+  margin: 0;            
+  display: flex;         
+  align-items: center;   
+  justify-content: center;
+}
