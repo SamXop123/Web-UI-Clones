@@ -171,7 +171,7 @@ body {
 
 .sidebar {
     width: 30vw;
-    height: 85vh;
+    height: 75vh;
     background-color: #1F1F1F;
     border-radius: 15px;
     padding: 5px;
@@ -179,7 +179,7 @@ body {
 
 .content {
     width: 75vw;
-    height: 85vh;
+    height: 75vh;
     background-color: #1F1F1F;
     padding: 5px;
     border-radius: 15px;
@@ -200,3 +200,17 @@ body {
     font-weight: 600;
 }
 
+
+/* --------------------- */
+
+
+.player-container {
+    background-color: #000000;
+    width: 100vw;
+    height: 75px;
+    position: fixed;
+    bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
