@@ -249,6 +249,35 @@ body {
   background-color: #333;
 }
 
+.playlist-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.playlist-text .playlist-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.playlist-text .playlist-sub {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.playlist-name.green {
+  color: #1ed760;
+}
+
+.icon-right {
+  position: absolute;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+}
 
 
 /*! content area */
