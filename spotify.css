@@ -344,6 +344,68 @@ body {
     scrollbar-width: none;
 }
 
+.album-list::-webkit-scrollbar {
+    display: none;
+}
+
+.album-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    min-width: 160px;
+    max-width: 160px;
+    flex-shrink: 0;
+    position: relative;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.album-info {
+    margin-top: 8px;
+}
+
+.album-info strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #fff;
+}
+
+.album-info p {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    background-color: #1fdf64;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: black;
+    font-size: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.album-card:hover .play-button {
+    display: flex;
+}
 
 
 /* --------------------- */
