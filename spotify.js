@@ -31,11 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeContainer = document.querySelector('.volume-container');
     const volumeProgress = document.querySelector('.volume-progress');
 
+    let currentSongIndex = 0;
     let isPlaying = false;
     let isLooping = false;
+    let isShuffling = false;
     let isMuted = false;
     let volume = 1.0; // Volume range: 0.0 to 1.0
-    let audio = new Audio(); 
+    let currentTime = 0;
+    let audio = new Audio();
 
     // time format function
     const formatTime = (seconds) => {
@@ -68,6 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
+
+    // Syncs progress bar with audio
+    audio.addEventListener('timeupdate', () => {
+        currentTime = audio.currentTime;
+        currentTimeEl.textContent = formatTime(currentTime);
+        progressBar.style.width = `${(currentTime / songs[currentSongIndex].duration) * 100}%`;
+    });
+
+    // Handles song ending
+    audio.addEventListener('ended', () => {
+        if (isLooping) {
+            audio.currentTime = 0;
+            audio.play();
+        } else {
+            playNext();
+        }
+    });
 
     
 });
