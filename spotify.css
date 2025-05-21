@@ -528,12 +528,12 @@ body {
     background-color: #444;
     border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .progress-filled {
     height: 100%;
     width: 60%;
-    /* This is just a placeholder. JS will change it later */
     background-color: #fff;
     transition: width 0.3s ease;
     border-radius: 10px;
@@ -546,4 +546,26 @@ body {
     justify-content: flex-end;
     gap: 15px;
     min-width: 180px;
+}
+
+.volume-container {
+    position: relative;
+    width: 80px;
+    height: 5px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.volume-progress {
+    height: 100%;
+    width: 100%; 
+    background-color: #fff;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.player-btns.green svg path {
+    fill: #1db954 !important;
 }
