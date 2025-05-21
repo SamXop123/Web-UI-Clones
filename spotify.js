@@ -17,5 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressContainer = document.querySelector('.progress-bar');
     const currentTimeEl = document.querySelector('.current-time');
     const totalTimeEl = document.querySelector('.total-time');
-    
+    const playBtn = document.querySelector('#play');
+    const pauseBtn = document.querySelector('#pause');
+    const nextBtn = document.querySelector('#next');
+    const previousBtn = document.querySelector('#previous');
+    const repeatBtn = document.querySelector('#repeat');
+    const shuffleBtn = document.querySelector('#shuffle');
+    const volumeBtn = document.querySelector('#volume');
+    const muteBtn = document.querySelector('#mute');
+    const fullscreenBtn = document.querySelector('#fullscreen');
+    const menuBtn = document.querySelector('#menu');
+    const albumCards = document.querySelectorAll('.album-card');
+    const volumeContainer = document.querySelector('.volume-container');
+    const volumeProgress = document.querySelector('.volume-progress');
+
+ 
 });
