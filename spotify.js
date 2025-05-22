@@ -152,7 +152,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    
+    // Toggle fullscreen for entire document
+    const toggleFullscreen = () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.error(`Fullscreen error: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    };
 
     
 });
