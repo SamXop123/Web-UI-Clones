@@ -204,5 +204,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // repeat and shuffle button colors based on state
+    const updateButtonColors = () => {
+        repeatBtn.classList.toggle('green', isLooping);
+        shuffleBtn.classList.toggle('green', isShuffling);
+    };
+
+    updatePlayer(currentSongIndex);
+
+    albumCards.forEach((card, index) => {
+        const playButton = card.querySelector('.play-button');
+        playButton.addEventListener('click', () => {
+            updatePlayer(index);
+            if (!isPlaying) {
+                togglePlayPause();
+            }
+        });
+    });
+
     
 });
