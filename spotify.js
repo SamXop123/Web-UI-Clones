@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isLooping = false;
     let isShuffling = false;
     let isMuted = false;
-    let volume = 1.0; // Volume range: 0.0 to 1.0
+    let volume = 1.0;  //Volume range: 0.0 to 1.0
     let currentTime = 0;
     let audio = new Audio();
 
@@ -88,6 +88,71 @@ document.addEventListener('DOMContentLoaded', () => {
             playNext();
         }
     });
+
+    // Play next song
+    const playNext = () => {
+        let nextIndex;
+        if (isShuffling) {
+            nextIndex = Math.floor(Math.random() * songs.length);
+        } else {
+            nextIndex = (currentSongIndex + 1) % songs.length;
+        }
+        updatePlayer(nextIndex);
+    };
+
+    // Play previous song
+    const playPrevious = () => {
+        let prevIndex;
+        if (isShuffling) {
+            prevIndex = Math.floor(Math.random() * songs.length);
+        } else {
+            prevIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+        }
+        updatePlayer(prevIndex);
+    };
+
+    // Toggle play/pause
+    const togglePlayPause = () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+            playBtn.style.display = 'none';
+            pauseBtn.style.display = 'inline-flex';
+            audio.play().catch(err => {
+                console.error(`Audio playback error: ${err.message}`);
+            });
+        } else {
+            playBtn.style.display = 'inline-flex';
+            pauseBtn.style.display = 'none';
+            audio.pause();
+        }
+    };
+
+    // Toggle mute/unmute
+    const toggleMute = () => {
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        volumeBtn.style.display = isMuted ? 'none' : 'inline-flex';
+        muteBtn.style.display = isMuted ? 'inline-flex' : 'none';
+        volumeProgress.style.width = isMuted ? '0%' : `${volume * 100}%`;
+    };
+
+    // Update volume
+    const updateVolume = (newVolume) => {
+        volume = Math.max(0, Math.min(1, newVolume));
+        audio.volume = volume;
+        volumeProgress.style.width = `${volume * 100}%`;
+        if (volume === 0) {
+            isMuted = true;
+            volumeBtn.style.display = 'none';
+            muteBtn.style.display = 'inline-flex';
+        } else if (isMuted) {
+            isMuted = false;
+            volumeBtn.style.display = 'inline-flex';
+            muteBtn.style.display = 'none';
+        }
+    };
+
+    
 
     
 });
