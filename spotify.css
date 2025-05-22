@@ -569,3 +569,50 @@ body {
 .player-btns.green svg path {
     fill: #1db954 !important;
 }
+
+
+
+.playlist-page {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.playlist-back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.playlist-back-btn svg path {
+    fill: #a7a7a7;
+}
+
+.playlist-back-btn:hover svg path {
+    fill: #fff;
+}
+
+.playlist-back-btn.green svg path {
+    fill: #1db954 !important;
+}
+
+.playlist-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.playlist-songs {
+    display: grid;
+    gap: 10px;
+}
