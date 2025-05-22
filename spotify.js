@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         volumeProgress.style.width = isMuted ? '0%' : `${volume * 100}%`;
     };
 
-    // Update volume
+    // Updates volume
     const updateVolume = (newVolume) => {
         volume = Math.max(0, Math.min(1, newVolume));
         audio.volume = volume;
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Toggle fullscreen for entire document
+    // Fullscreen mode
     const toggleFullscreen = () => {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().catch(err => {
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Handle progress bar click
+    // Handles progress bar click
     progressContainer.addEventListener('click', (e) => {
         const rect = progressContainer.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
@@ -175,12 +175,33 @@ document.addEventListener('DOMContentLoaded', () => {
         progressBar.style.width = `${(currentTime / song.duration) * 100}%`;
     });
 
-    // Handle volume bar click
+    // Handles volume bar click
     volumeContainer.addEventListener('click', (e) => {
         const rect = volumeContainer.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
         const width = rect.width;
         updateVolume(clickX / width);
+    });
+
+    const playerButtons = [playBtn, pauseBtn, nextBtn, previousBtn, repeatBtn, shuffleBtn, volumeBtn, muteBtn, fullscreenBtn, menuBtn];
+    playerButtons.forEach(button => {
+        button.addEventListener('mousedown', () => {
+            button.classList.add('green');
+        });
+        button.addEventListener('mouseup', () => {
+            if (button !== repeatBtn && button !== shuffleBtn) {
+                button.classList.remove('green');
+            } else {
+                button.classList.toggle('green', button === repeatBtn ? isLooping : isShuffling);
+            }
+        });
+        button.addEventListener('mouseleave', () => {
+            if (button !== repeatBtn && button !== shuffleBtn) {
+                button.classList.remove('green');
+            } else {
+                button.classList.toggle('green', button === repeatBtn ? isLooping : isShuffling);
+            }
+        });
     });
 
     
