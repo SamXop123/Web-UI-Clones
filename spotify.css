@@ -616,3 +616,38 @@ body {
     display: grid;
     gap: 10px;
 }
+
+.playlist-song {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #282828;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.playlist-song:hover {
+    background-color: #333;
+}
+
+.playlist-song img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.playlist-song-info {
+    flex: 1;
+}
+
+.playlist-song-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.playlist-song-artist {
+    font-size: 14px;
+    color: #a7a7a7;
+}
