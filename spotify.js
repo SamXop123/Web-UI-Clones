@@ -222,5 +222,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
+    // Events for player controls
+    playBtn.addEventListener('click', togglePlayPause);
+    pauseBtn.addEventListener('click', togglePlayPause);
+    nextBtn.addEventListener('click', playNext);
+    previousBtn.addEventListener('click', playPrevious);
+    repeatBtn.addEventListener('click', () => {
+        isLooping = !isLooping;
+        audio.loop = isLooping;
+        updateButtonColors();
+    });
+    shuffleBtn.addEventListener('click', () => {
+        isShuffling = !isShuffling;
+        updateButtonColors();
+    });
+    volumeBtn.addEventListener('click', toggleMute);
+    muteBtn.addEventListener('click', toggleMute);
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    pauseBtn.style.display = 'none';
+    muteBtn.style.display = 'none';
+    volumeProgress.style.width = `${volume * 100}%`;
+
+    updateButtonColors();
 });
