@@ -163,5 +163,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Handle progress bar click
+    progressContainer.addEventListener('click', (e) => {
+        const rect = progressContainer.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        const song = songs[currentSongIndex];
+        currentTime = (clickX / width) * song.duration;
+        audio.currentTime = currentTime;
+        currentTimeEl.textContent = formatTime(currentTime);
+        progressBar.style.width = `${(currentTime / song.duration) * 100}%`;
+    });
+
+    // Handle volume bar click
+    volumeContainer.addEventListener('click', (e) => {
+        const rect = volumeContainer.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        updateVolume(clickX / width);
+    });
+
     
 });
