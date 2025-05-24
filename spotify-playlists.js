@@ -10,6 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!response.ok) throw new Error('Failed to load playlist');
                 return response.text();
             })
+            .then(html => {
+                content.innerHTML = html;
+                // Add event listeners for playlist songs
+                content.querySelectorAll('.playlist-song').forEach(song => {
+                    song.addEventListener('click', () => {
+                        const songIndex = parseInt(song.dataset.songIndex);
+                        window.updatePlayer(songIndex);
+                        if (!window.isPlaying) {
+                            window.togglePlayPause();
+                        }
+                    });
+                });
+                
+            })
             .catch(error => {
                 console.error('Error loading playlist:', error);
                 content.innerHTML = '<p>Error loading playlist</p>';
