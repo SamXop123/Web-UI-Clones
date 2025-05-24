@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
                     });
                 });
+                // Green color effect for back button
+                backBtn.addEventListener('mousedown', () => backBtn.classList.add('green'));
+                backBtn.addEventListener('mouseup', () => backBtn.classList.remove('green'));
+                backBtn.addEventListener('mouseleave', () => backBtn.classList.remove('green'));
             })
             .catch(error => {
                 console.error('Error loading playlist:', error);
