@@ -560,7 +560,7 @@ body {
 
 .volume-progress {
     height: 100%;
-    width: 100%; 
+    width: 100%;
     background-color: #fff;
     transition: width 0.3s ease;
     border-radius: 10px;
@@ -571,6 +571,8 @@ body {
 }
 
 
+
+/*! PLAYLIST PAGES */
 
 .playlist-page {
     width: 100%;
