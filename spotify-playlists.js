@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playlistCards = document.querySelectorAll('.playlist-card');
     let originalContent = content.innerHTML; 
 
-    // Load playlist page
+    // for Loading playlist page
     const loadPlaylistPage = (playlistId) => {
         fetch(`/playlists/${playlistId}.html`)
             .then(response => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(html => {
                 content.innerHTML = html;
-                // Add event listeners for playlist songs
+                // event listeners for playlist songs
                 content.querySelectorAll('.playlist-song').forEach(song => {
                     song.addEventListener('click', () => {
                         const songIndex = parseInt(song.dataset.songIndex);
@@ -22,7 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 });
-                
+                // event listener for back button
+                const backBtn = content.querySelector('.playlist-back-btn');
+                backBtn.addEventListener('click', () => {
+                    content.innerHTML = originalContent;
+                    addPlaylistEventListeners();
+                    // Re-attach album card listeners
+                    document.querySelectorAll('.album-card').forEach((card, index) => {
+                        const playButton = card.querySelector('.play-button');
+                        playButton.addEventListener('click', () => {
+                            window.updatePlayer(index);
+                            if (!window.isPlaying) {
+                                window.togglePlayPause();
+                            }
+                        });
+                    });
+                });
             })
             .catch(error => {
                 console.error('Error loading playlist:', error);
@@ -30,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
+    // event listeners for playlist cards
     const addPlaylistEventListeners = () => {
         playlistCards.forEach(card => {
             card.addEventListener('click', () => {
