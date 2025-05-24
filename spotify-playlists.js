@@ -30,4 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
+    const addPlaylistEventListeners = () => {
+        playlistCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const playlistId = card.dataset.playlistId;
+                loadPlaylistPage(playlistId);
+            });
+        });
+    };
+
+    addPlaylistEventListeners();
 });
