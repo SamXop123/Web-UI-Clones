@@ -1,9 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector('.content');
-    const playlistCards = document.querySelectorAll('.playlist-card');
-    let originalContent = content.innerHTML; 
+    let originalContent = content.innerHTML; // Store original content
 
-    // for Loading playlist page
+    // Add event listeners for playlist cards
+    const addPlaylistEventListeners = () => {
+        const playlistCards = document.querySelectorAll('.playlist-card');
+        playlistCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const playlistId = card.dataset.playlistId;
+                loadPlaylistPage(playlistId);
+            });
+        });
+    };
+
+    // Re-attach album card play button listeners (from spotify.js logic)
+    const addAlbumCardListeners = () => {
+        const albumCards = document.querySelectorAll('.album-card');
+        albumCards.forEach((card, index) => {
+            const playButton = card.querySelector('.play-button');
+            // Remove existing listeners by cloning
+            const newPlayButton = playButton.cloneNode(true);
+            playButton.parentNode.replaceChild(newPlayButton, playButton);
+            newPlayButton.addEventListener('click', () => {
+                window.updatePlayer(index);
+                if (!window.isPlaying) {
+                    window.togglePlayPause();
+                }
+            });
+        });
+    };
+
+    // Load playlist page
     const loadPlaylistPage = (playlistId) => {
         fetch(`/playlists/${playlistId}.html`)
             .then(response => {
@@ -12,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(html => {
                 content.innerHTML = html;
-                // event listeners for playlist songs
+                // Add event listeners for playlist songs
                 content.querySelectorAll('.playlist-song').forEach(song => {
                     song.addEventListener('click', () => {
                         const songIndex = parseInt(song.dataset.songIndex);
@@ -22,21 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 });
-                // event listener for back button
+                // Add event listener for back button
                 const backBtn = content.querySelector('.playlist-back-btn');
                 backBtn.addEventListener('click', () => {
                     content.innerHTML = originalContent;
                     addPlaylistEventListeners();
-                    // Re-attach album card listeners
-                    document.querySelectorAll('.album-card').forEach((card, index) => {
-                        const playButton = card.querySelector('.play-button');
-                        playButton.addEventListener('click', () => {
-                            window.updatePlayer(index);
-                            if (!window.isPlaying) {
-                                window.togglePlayPause();
-                            }
-                        });
-                    });
+                    addAlbumCardListeners(); // Re-attach album card listeners
                 });
                 // Green color effect for back button
                 backBtn.addEventListener('mousedown', () => backBtn.classList.add('green'));
@@ -49,15 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
-    // event listeners for playlist cards
-    const addPlaylistEventListeners = () => {
-        playlistCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const playlistId = card.dataset.playlistId;
-                loadPlaylistPage(playlistId);
-            });
-        });
-    };
-
+    // Initialize listeners
     addPlaylistEventListeners();
 });
