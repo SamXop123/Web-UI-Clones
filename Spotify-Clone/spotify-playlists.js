@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load playlist page
     const loadPlaylistPage = (playlistId) => {
-        fetch(`/playlists/${playlistId}.html`)
+        fetch(`playlists/${playlistId}.html`)
             .then(response => {
                 if (!response.ok) throw new Error('Failed to load playlist');
                 return response.text();
