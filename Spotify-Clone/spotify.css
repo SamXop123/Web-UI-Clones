@@ -620,3 +620,21 @@ body {
     fill: #1db954 !important;
 }
 
+
+/*! Responsive Styleing */
+@media (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .sidebar, .content {
+        width: 100vw;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .playlist-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+
