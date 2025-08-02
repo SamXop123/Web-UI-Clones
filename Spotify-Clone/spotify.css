@@ -724,7 +724,40 @@ body {
         max-width: 120px;
         padding: 5px;
     }
-    
+    .player-container {
+        flex-direction: column;
+        height: auto;
+        padding: 5px;
+        gap: 8px;
+    }
+    .song-info img {
+        height: 40px;
+        width: 40px;
+        margin-right: 8px;
+    }
+    #song-name {
+        font-size: 12px;
+    }
+    #song-artist {
+        font-size: 10px;
+    }
+    .player-controls {
+        gap: 10px;
+    }
+    .progress-container {
+        gap: 5px;
+        max-width: 95vw;
+    }
+    .time {
+        font-size: 10px;
+        width: 30px;
+    }
+    .player-functions {
+        gap: 8px;
+    }
+    .volume-container {
+        width: 50px;
+    }
 }
 
 
