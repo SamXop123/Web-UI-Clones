@@ -692,3 +692,39 @@ body {
     }
 }
 
+@media (max-width: 500px) {
+    .nav, .nav-p-1, .nav-p-2 {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+    .logo {
+        margin-left: 5px;
+        width: 28px;
+    }
+    .search-box {
+        width: 95vw;
+        min-width: 120px;
+        font-size: 12px;
+    }
+    .sidebar, .content {
+        padding: 2px;
+        border-radius: 0;
+    }
+    .playlist-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 5px;
+    }
+    .album-list {
+        gap: 10px;
+    }
+    .album-card {
+        min-width: 120px;
+        max-width: 120px;
+        padding: 5px;
+    }
+    
+}
+
+
